@@ -1,0 +1,35 @@
+y<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock Paper Scissors</title>
+    <link rel="icon" href="./rock-paper-scissors.png" />
+  </head>
+  <body>
+    <div class="form">
+      <form action="" method="post" id="form">
+        <label for="name"></label>
+        <input type="text" id="nickname" required />
+        <input type="submit" id="submit" value="Set Nickname" />
+      </form>
+    </div>
+
+    <div class="popup"></div>
+    <div class="players">
+      <div class="leftPlayer">
+        <div class="handGesture"></div>
+      </div>
+      <div class="rightPlayer"></div>
+    </div>
+
+    <div class="allButtons">
+      <button class="buttons" id="rock">Rock</button>
+      <button class="buttons" id="paper">Paper</button>
+      <button class="buttons" id="scissors">Scissors</button>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>

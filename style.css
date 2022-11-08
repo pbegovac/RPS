@@ -1,0 +1,117 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  background-color: #000044;
+}
+
+body {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.form {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form #nickname {
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  background-color: #efede5;
+  outline: none;
+  border-radius: 4px;
+}
+
+.form #submit {
+  padding: 5px;
+  width: 100px;
+  cursor: pointer;
+  border: none;
+  background-color: #d36767;
+  border-radius: 4px;
+  color: #efede5;
+}
+
+.players {
+  height: 80vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.players .leftPlayer {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.players .leftPlayer .handGesture {
+  width: 304px;
+  height: 268px;
+  background-repeat: no-repeat;
+  -webkit-transform: scalex(-1);
+          transform: scalex(-1);
+}
+
+.players .rightPlayer {
+  width: 50%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.popup {
+  height: 500px;
+  width: 500px;
+  display: none;
+  background-color: #efede5;
+  border-radius: 4px;
+}
+
+.allButtons {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.allButtons .buttons {
+  padding: 5px;
+  width: 100px;
+  cursor: pointer;
+  border: none;
+  background-color: #d36767;
+  border-radius: 4px;
+  color: #efede5;
+  margin-right: 10%;
+}
+/*# sourceMappingURL=style.css.map */
