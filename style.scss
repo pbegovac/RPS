@@ -48,18 +48,20 @@ body {
   height: 80vh;
   width: 100%;
   display: flex;
+
   .leftPlayer {
     width: 50%;
     height: 100%;
     @include flexCenter;
     .handGesture {
+      background-image: url("images/rock.png");
       width: 304px;
       height: 268px;
       background-repeat: no-repeat;
-
-      transform: scalex(-1);
+      transform: scaleX(-1);
     }
   }
+
   .rightPlayer {
     width: 50%;
     height: 100%;
@@ -67,12 +69,87 @@ body {
   }
 }
 
-.popup {
+.popupField {
   height: 500px;
-  width: 500px;
-  display: none;
-  background-color: $white-color;
-  border-radius: 4px;
+  width: 100%;
+  background-color: #000044;
+  @include flexCenter;
+  .popup {
+    height: 100%;
+    width: 50%;
+    border-radius: 4px;
+    background-color: $white-color;
+    @include flexCenter;
+    flex-direction: column;
+    .playButton {
+      width: 100px;
+      height: 100px;
+      background-image: url("images/play-button.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+      background-color: $white-color;
+      border: none;
+      cursor: pointer;
+    }
+    .lds-ellipsis {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+      background-color: $white-color;
+      div {
+        position: absolute;
+        top: 33px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: black;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+      div:nth-child(1) {
+        left: 8px;
+        animation: lds-ellipsis1 0.6s infinite;
+      }
+      div:nth-child(2) {
+        left: 8px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      div:nth-child(3) {
+        left: 32px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      div:nth-child(4) {
+        left: 56px;
+        animation: lds-ellipsis3 0.6s infinite;
+      }
+    }
+
+    @keyframes lds-ellipsis1 {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes lds-ellipsis3 {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
+    @keyframes lds-ellipsis2 {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(24px, 0);
+      }
+    }
+  }
 }
 
 .allButtons {
