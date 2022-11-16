@@ -33,6 +33,7 @@ rock.addEventListener("click", () => {
   playHand();
   setTimeout(() => {
     handGesture.style.backgroundImage = "url('images/rock.png')";
+    handGesture.classList.remove("handAnimation");
   }, "500");
 });
 
@@ -40,6 +41,7 @@ paper.addEventListener("click", () => {
   playHand();
   setTimeout(() => {
     handGesture.style.backgroundImage = "url('images/paper.png')";
+    handGesture.classList.remove("handAnimation");
   }, "500");
 });
 
@@ -48,5 +50,6 @@ scissors.addEventListener("click", () => {
   playHand();
   setTimeout(() => {
     handGesture.style.backgroundImage = "url('images/scissors.png')";
+    handGesture.classList.remove("handAnimation");
   }, "500");
 });
