@@ -23,15 +23,30 @@ form.addEventListener("submit", (e) => {
   }
 });
 
+let playHand = () => {
+  handGesture.classList.add("handAnimation");
+};
+
 //player1 choices
+//forEach click
 rock.addEventListener("click", () => {
-  handGesture.style.backgroundImage = "url('images/rock.png')";
+  playHand();
+  setTimeout(() => {
+    handGesture.style.backgroundImage = "url('images/rock.png')";
+  }, "500");
 });
 
 paper.addEventListener("click", () => {
-  handGesture.style.backgroundImage = "url('images/paper.png')";
+  playHand();
+  setTimeout(() => {
+    handGesture.style.backgroundImage = "url('images/paper.png')";
+  }, "500");
 });
 
+//forEach click
 scissors.addEventListener("click", () => {
-  handGesture.style.backgroundImage = "url('images/scissors.png')";
+  playHand();
+  setTimeout(() => {
+    handGesture.style.backgroundImage = "url('images/scissors.png')";
+  }, "500");
 });

@@ -263,4 +263,106 @@ body {
   color: #efede5;
   margin-right: 10%;
 }
+
+.handAnimation {
+  background-image: url("images/rock.png");
+  -webkit-animation: shake 0.5s;
+          animation: shake 0.5s;
+  -webkit-animation-iteration-count: 2s;
+          animation-iteration-count: 2s;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: scaleX(-1) translate(1px, 1px) rotate(0deg);
+            transform: scaleX(-1) translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: scaleX(-1) translate(-1px, -2px) rotate(-1deg);
+            transform: scaleX(-1) translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: scaleX(-1) translate(-3px, 0px) rotate(1deg);
+            transform: scaleX(-1) translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: scaleX(-1) translate(3px, 2px) rotate(0deg);
+            transform: scaleX(-1) translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: scaleX(-1) translate(1px, -1px) rotate(1deg);
+            transform: scaleX(-1) translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: scaleX(-1) translate(-1px, 2px) rotate(-1deg);
+            transform: scaleX(-1) translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: scaleX(-1) translate(-3px, 1px) rotate(0deg);
+            transform: scaleX(-1) translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: scaleX(-1) translate(3px, 1px) rotate(-1deg);
+            transform: scaleX(-1) translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: scaleX(-1) translate(-1px, -1px) rotate(1deg);
+            transform: scaleX(-1) translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: scaleX(-1) translate(1px, 2px) rotate(0deg);
+            transform: scaleX(-1) translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scaleX(-1) translate(1px, -2px) rotate(-1deg);
+            transform: scaleX(-1) translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: scaleX(-1) translate(1px, 1px) rotate(0deg);
+            transform: scaleX(-1) translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: scaleX(-1) translate(-1px, -2px) rotate(-1deg);
+            transform: scaleX(-1) translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: scaleX(-1) translate(-3px, 0px) rotate(1deg);
+            transform: scaleX(-1) translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: scaleX(-1) translate(3px, 2px) rotate(0deg);
+            transform: scaleX(-1) translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: scaleX(-1) translate(1px, -1px) rotate(1deg);
+            transform: scaleX(-1) translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: scaleX(-1) translate(-1px, 2px) rotate(-1deg);
+            transform: scaleX(-1) translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: scaleX(-1) translate(-3px, 1px) rotate(0deg);
+            transform: scaleX(-1) translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: scaleX(-1) translate(3px, 1px) rotate(-1deg);
+            transform: scaleX(-1) translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: scaleX(-1) translate(-1px, -1px) rotate(1deg);
+            transform: scaleX(-1) translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: scaleX(-1) translate(1px, 2px) rotate(0deg);
+            transform: scaleX(-1) translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scaleX(-1) translate(1px, -2px) rotate(-1deg);
+            transform: scaleX(-1) translate(1px, -2px) rotate(-1deg);
+  }
+}
 /*# sourceMappingURL=style.css.map */
