@@ -42,32 +42,25 @@ form.addEventListener("submit", (e) => {
 let playHand = () => {
   handGesture.style.backgroundImage = "url('images/rock.png')";
   handGesture.classList.add("handAnimation");
+  setTimeout(() => {
+    handGesture.style.backgroundImage =
+      "url('images/" + leftPlayer.choice + ".png')";
+    handGesture.classList.remove("handAnimation");
+  }, "500");
 };
 
 rock.addEventListener("click", () => {
   playHand();
-  setTimeout(() => {
-    handGesture.style.backgroundImage = "url('images/rock.png')";
-    handGesture.classList.remove("handAnimation");
-  }, "500");
   getPlayerChoice("rock", leftPlayer);
 });
 
 paper.addEventListener("click", () => {
   playHand();
-  setTimeout(() => {
-    handGesture.style.backgroundImage = "url('images/paper.png')";
-    handGesture.classList.remove("handAnimation");
-  }, "500");
   getPlayerChoice("paper", leftPlayer);
 });
 
 scissors.addEventListener("click", () => {
   playHand();
-  setTimeout(() => {
-    handGesture.style.backgroundImage = "url('images/scissors.png')";
-    handGesture.classList.remove("handAnimation");
-  }, "500");
   getPlayerChoice("scissors", leftPlayer);
 });
 
