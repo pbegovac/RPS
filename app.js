@@ -130,5 +130,3 @@ scissors2.addEventListener("click", () => {
   handGesture.style.backgroundImage = "url('images/scissors.png')";
   getPlayerChoice("scissors", rightPlayer);
 });
-
-console.log(leftPlayer);
