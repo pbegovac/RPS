@@ -85,23 +85,15 @@ function calculateResult(player1, player2) {
     "player two choice: " + player2
   );
 
-  if (player1 === "rock" && player2 === "rock") {
+  if (player1 === player2) {
     result = "tie";
   } else if (player1 === "rock" && player2 === "paper") {
     result = "player two wins";
-  } else if (player1 === "rock" && player2 === "scissors") {
-    result = "player one wins";
-  } else if (player1 === "paper" && player2 === "paper") {
-    result = "tie";
-  } else if (player1 === "paper" && player2 === "rock") {
+  } else if (player1 === "scissors" && player2 === "rock") {
     result = "player two wins";
   } else if (player1 === "paper" && player2 === "scissors") {
     result = "player two wins";
-  } else if (player1 === "scissors" && player2 === "scissors") {
-    result = "tie";
-  } else if (player1 === "scissors" && player2 === "rock") {
-    result = "player two wins";
-  } else if (player1 === "scissors" && player2 === "paper") {
+  } else {
     result = "player one wins";
   }
 
