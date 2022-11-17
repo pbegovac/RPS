@@ -26,7 +26,6 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
- 
 }
 
 .form {
@@ -68,25 +67,141 @@ body {
   }
 }
 
-.popup {
+.popupField {
   height: 500px;
-  width: 500px;
-  display: none;
-  background-color: $white-color;
-  border-radius: 4px;
+  width: 100%;
+  background-color: #000044;
+  @include flexCenter;
+  .popup {
+    height: 100%;
+    width: 50%;
+    border-radius: 4px;
+    background-color: $white-color;
+    @include flexCenter;
+    flex-direction: column;
+    .playButton {
+      width: 100px;
+      height: 100px;
+      background-image: url("images/play-button.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+      background-color: $white-color;
+      border: none;
+      cursor: pointer;
+    }
+    .lds-ellipsis {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+      background-color: $white-color;
+      div {
+        position: absolute;
+        top: 33px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: black;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+      div:nth-child(1) {
+        left: 8px;
+        animation: lds-ellipsis1 0.6s infinite;
+      }
+      div:nth-child(2) {
+        left: 8px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      div:nth-child(3) {
+        left: 32px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      div:nth-child(4) {
+        left: 56px;
+        animation: lds-ellipsis3 0.6s infinite;
+      }
+    }
+  }
+
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
 }
 
 .allButtons {
   width: 50%;
   @include flexCenter;
-  
+
   .buttons {
     @include buttons;
     margin-right: 10%;
   }
 }
 
-.bothPlayers{
-  display: flex;
+.handAnimation {
+  background-image: url("images/rock.png");
+  animation: shake 0.5s;
+  animation-iteration-count: 2s;
+
+  @keyframes shake {
+    0% {
+      transform: scaleX(-1) translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: scaleX(-1) translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: scaleX(-1) translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: scaleX(-1) translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: scaleX(-1) translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: scaleX(-1) translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: scaleX(-1) translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: scaleX(-1) translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: scaleX(-1) translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: scaleX(-1) translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: scaleX(-1) translate(1px, -2px) rotate(-1deg);
+    }
+  }
 }
 
+.bothPlayers {
+  display: flex;
+}
