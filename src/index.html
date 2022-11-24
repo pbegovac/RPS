@@ -31,23 +31,28 @@
 
     <div class="players">
       <div class="leftPlayer">
+        <div class="score1"><p class="player1score"></p></div>
         <div class="handGesture"></div>
       </div>
-      <div class="rightPlayer"></div>
+      <div class="rightPlayer">
+        <div class="score2"><p class="player2score"></p></div>
+        <div class="handGesture2"></div>
+      </div>
     </div>
-    <div class="bothPlayers">
-      <div class="allButtons">
+    <div class="allButtons">
+      <div class="leftButtons">
         <button class="buttons" id="rock">Rock</button>
         <button class="buttons" id="paper">Paper</button>
         <button class="buttons" id="scissors">Scissors</button>
       </div>
-      <div class="allButtons">
-        <button class="buttons" id="rock2">Rock2</button>
-        <button class="buttons" id="paper2">Paper2</button>
-        <button class="buttons" id="scissors2">Scissors2</button>
+      <div class="rightButtons">
+        <button class="buttons2" id="rock2">Rock</button>
+        <button class="buttons2" id="paper2">Paper</button>
+        <button class="buttons2" id="scissors2">Scissors</button>
       </div>
     </div>
   </body>
-  <script src="./app.js" type="module"></script>
+
+  <script src="../dist/bundle.js" type="module"></script>
   <script src="./popup.js" type="module"></script>
 </html>
