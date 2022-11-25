@@ -1,7 +1,3 @@
-import { popupField, popup } from "./popup.js";
-
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
@@ -9,10 +5,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 //   getFirestore,
 //   getDocs,
 //   collection,
-// } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
-
-// import { getAuth } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
-// import { getFirestore } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+// } from "firebase/firestore";
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyDnyLZt3uMsr5mg-AAWRdJroDE8ZEtI9Ao",
@@ -25,6 +18,13 @@ const firebaseApp = initializeApp({
 
 const auth = getAuth(firebaseApp);
 
+const signIn = document.querySelector(".googleSignIn");
+// const signOut = document.querySelector(".googleSignOut");
+
+const provider = new firebaseApp.auth.GoogleAuthProvider();
+
+signIn.addEventListener("click", auth.signInWithPopup(provider));
+// signOut.addEventListener("click", auth.signOut());
 //Detect auth state
 
 onAuthStateChanged(auth, (user) => {
@@ -35,11 +35,9 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
-const form = document.querySelector(".form");
+// const form = document.querySelector(".form");
 export const players = document.querySelector(".players");
 export const allButtons = document.querySelector(".allButtons");
-
-nickname.focus();
 
 const leftPlayer = {
   choice: null,
@@ -50,19 +48,6 @@ const rightPlayer = {
   choice: null,
   isReady: false,
 };
-
-form.addEventListener("submit", (e) => {
-  //fill nickname - popup button to start game - loading till next player comes into the game - when he is in start game automatically
-  const nickname = document.querySelector("#nickname");
-  e.preventDefault();
-  if (nickname.value !== "") {
-    popupField.style.display = "flex";
-    popup.style.display = "flex";
-    allButtons.style.display = "none";
-    players.style.display = "none";
-    nickname.value = "";
-  }
-});
 
 let getPlayerChoice = (selection, player) => {
   player.choice = selection;
@@ -90,19 +75,19 @@ let playGame = () => {
   //if rightPlayer was last to click shake right pic
   rightButtons.forEach((rightButton) =>
     rightButton.addEventListener("click", () => {
-      handGesture2.style.backgroundImage = "url('images/rock.png')";
+      handGesture2.style.backgroundImage = "url('./images/rock.png')";
       handGesture2.classList.add("handAnimation2");
       setTimeout(() => {
         handGesture2.style.backgroundImage =
-          "url('images/" + rightPlayer.choice + ".png')";
+          "url('./images/" + rightPlayer.choice + ".png')";
         handGesture2.classList.remove("handAnimation2");
       }, "500");
 
-      handGesture.style.backgroundImage = "url('images/rock.png')";
+      handGesture.style.backgroundImage = "url('./images/rock.png')";
       handGesture.classList.add("handAnimation");
       setTimeout(() => {
         handGesture.style.backgroundImage =
-          "url('images/" + leftPlayer.choice + ".png')";
+          "url('./images/" + leftPlayer.choice + ".png')";
         handGesture.classList.remove("handAnimation");
         let calculateResult = (player1, player2) => {
           let result = null;
